@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>System księgowy</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+
+    <style>
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>System księgowy</h1>
+        <a href="historia.html">Historia</a>
+
+        <h2>Stan konta</h2>
+        <p>1000 zł</p>
+
+        <h2>Magazyn</h2>
+        <p>Kubek - 100 szt.</p>
+        <p>Talerz - 100 szt.</p>
+        <p>Miska - 100 szt.</p>
+
+
+        <h2>Zakup</h2>
+
+        <form method="POST">
+
+            <div class="columns">
+
+                <div class="column col-4">
+                    <div class="form-group">
+                        <label class="form-label">Nazwa produktu:</label>
+                        <input class="form-input" type="text" name="nazwa">
+                    </div>
+                </div>
+
+                <div class="column col-4">
+                    <div class="form-group">
+                        <label class="form-label">Cena jednostkowa:</label>
+                        <input class="form-input" type="number" name="cena">
+                    </div>
+                </div>
+
+                <div class="column col-4">
+                    <div class="form-group">
+                        <label class="form-label">Liczba sztuk:</label>
+                        <input class="form-input" type="number" name="ilosc">
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="btn btn-primary" type="submit">Kup</button>
+
+        </form>
+
+
+        <h2>Sprzedaż</h2>
+
+        <form method="POST">
+
+            <div class="columns">
+
+                <div class="column col-4">
+                    <div class="form-group">
+                        <label class="form-label">Nazwa produktu:</label>
+                        <input class="form-input" type="text" name="nazwa">
+                    </div>
+                </div>
+
+                <div class="column col-4">
+                    <div class="form-group">
+                        <label class="form-label">Cena jednostkowa:</label>
+                        <input class="form-input" type="number" name="cena">
+                    </div>
+                </div>
+
+                <div class="column col-4">
+                    <div class="form-group">
+                        <label class="form-label">Liczba sztuk:</label>
+                        <input class="form-input" type="number" name="ilosc">
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="btn btn-primary" type="submit">Sprzedaj</button>
+
+        </form>
+
+
+        <h2>Zmiana salda</h2>
+
+        <form method="POST">
+
+            <div class="columns">
+
+                <div class="column col-6">
+                    <div class="form-group">
+                        <label class="form-label">Komentarz:</label>
+                        <input class="form-input" type="text" name="komentarz">
+                    </div>
+                </div>
+
+                <div class="column col-6">
+                    <div class="form-group">
+                        <label class="form-label">Wartość:</label>
+                        <input class="form-input" type="number" name="wartosc">
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="btn btn-primary" type="submit">Zmień saldo</button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>
