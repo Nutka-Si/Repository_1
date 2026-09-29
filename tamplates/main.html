@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>System księgowy</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+
+    <style>
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>System księgowy</h1>
+
+    <a href="/historia/">Historia</a>
+
+    <h2>Stan konta</h2>
+    <p>{{ stan_konta }} zł</p>
+
+    {% if produkty %}
+        <h2>Magazyn</h2>
+
+        {% for produkt in produkty %}
+            <p>
+                {{ produkt["nazwa_produktu"] }} -
+                {{ produkt["cena w zł"] }} zł -
+                {{ produkt["ilość"] }} szt.
+            </p>
+        {% endfor %}
+    {% endif %}
+
+    <h2>Zakup</h2>
+
+    <form method="POST">
+        <label>Nazwa produktu:</label>
+        <input type="text" name="nazwa">
+
+        <label>Cena:</label>
+        <input type="number" name="cena">
+
+        <label>Liczba sztuk:</label>
+        <input type="number" name="ilosc">
+
+        <button type="submit" name="akcja" value="zakup">Kup</button>
+    </form>
+
+    <h2>Sprzedaż</h2>
+
+    <form method="POST">
+        <label>Nazwa produktu:</label>
+        <input type="text" name="nazwa">
+
+        <label>Liczba sztuk:</label>
+        <input type="number" name="ilosc">
+
+        <button type="submit" name="akcja" value="sprzedaz">Sprzedaj</button>
+    </form>
+
+    <h2>Zmiana salda</h2>
+
+    <form method="POST">
+        <label>Wartość:</label>
+        <input type="number" name="wartosc">
+
+        <button type="submit" name="akcja" value="saldo">Zmień saldo</button>
+    </form>
+
+</div>
+
+</body>
+</html>
