@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Historia operacji</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+
+    <style>
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Historia operacji</h1>
+
+        <a href="/">Powrót do strony głównej</a>
+
+        {% if komunikat %}
+            <p>{{ komunikat }}</p>
+        {% endif %}
+
+        {% if historia %}
+            {% for operacja in historia %}
+                <p>{{ operacja }}</p>
+            {% endfor %}
+        {% endif %}
+
+    </div>
+
+</body>
+
+</html>
