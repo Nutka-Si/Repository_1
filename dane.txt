@@ -1,0 +1,19 @@
+1530.0
+kubek;5.0;98
+talerz;10.0;98
+miska;15.0;100
+kawa;20.0;10
+HISTORIA
+SALDO: 200.0 z³
+SPRZEDA¯: kubek, 2 szt., 10.0 z³
+SALDO: 100.0 z³
+ZAKUP: kawa, 5 szt., 100.0 z³
+ZAKUP: kawa, 5 szt., 100.0 z³
+SPRZEDA¯: kubek, 1 szt., 5.0 z³
+SPRZEDA¯: kubek, 1 szt., 5.0 z³
+SALDO: 100.0 z³
+SALDO: 100.0 z³
+ZAKUP: kubek, 2 szt., 10.0 z³
+SPRZEDA¯: talerz, 2 szt., 20.0 z³
+SALDO: 100.0 z³
+SALDO: 100.0 z³
